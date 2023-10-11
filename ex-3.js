@@ -19,11 +19,27 @@ let productSales = [
   { id: 14, menu: "แพนเค้กช็อกโกแลต", amount: 50, sales: 2000 },
   { id: 15, menu: "ไอศกรีมชาไทย", amount: 50, sales: 222200 },
 ];
+// โจทย์ให้ 
+// function calculateTotalSales(items) {
+//   let total = 0;
+//   for (let item of items) {
+//     total = total + item.sale;
+//   }
+//   return total;
+// }
 
+// let total = calculateTotalSales();
+
+// console.log("Total sales: ", total);
+
+
+// แก้ bug 
 function calculateTotalSales(items) {
   let total = 0;
-  for (let item of items) {
-    total = total + item.sale;
+  for (let item of productSales) { 
+// เราแก้จาก items > productSales เพราะ For of Loop คือ (Variable of iterable)
+    total = total + item.sales;
+// เราเพิ่ม s ไปต่อท้าย item.sale (โจทย์เขียนผิด)
   }
   return total;
 }
