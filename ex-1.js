@@ -1,14 +1,23 @@
 function addByX(x) {
   // Start coding here
+  // รับ Parameter 1 ตัวที่ชื่อว่า x เป็น Number
+
+  // Return ผลลัพธ์ออกมาเป็น Function อีกอัน
+  return function (y) {
+    // รับ Parameter หนึ่งตัวซึ่งเป็น Number (ขอเรียกว่า y)
+
+    // Return ผลลัพธ์ออกมาเป็น x + y
+    return x + y;
+  };
 }
 
 // Uncomment โค้ดด้านล่างเพื่อดูผลลัพธ์ของการทำงาน
 
-// const addByTwo = addByX(2);
-// console.log(addByTwo(1)); // => should return 3
-// console.log(addByTwo(2)); // => should return 4
-// console.log(addByTwo(3)); // => should return 5
+const addByTwo = addByX(2);
+console.log(addByTwo(1)); // => should return 3
+console.log(addByTwo(2)); // => should return 4
+console.log(addByTwo(3)); // => should return 5
 
-// const addByThree = addByX(3);
-// console.log(addByThree(1)); // => should return 4
-// console.log(addByThree(2)); // => should return 5
+const addByThree = addByX(3);
+console.log(addByThree(1)); // => should return 4
+console.log(addByThree(2)); // => should return 5
